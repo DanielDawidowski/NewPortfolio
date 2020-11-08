@@ -30,8 +30,12 @@ const Home = () => {
         <Dots />
         <GreenCircle />
         <motion.div className="social">
-          <GithubIcon className="github" />
-          <LinkedInIcon className="linkedIn" />
+          <a href="https://github.com/DanielDawidowski">
+            <GithubIcon className="github" />
+          </a>
+          <a href="https://www.linkedin.com/in/daniel-dawidowski-924905165/">
+            <LinkedInIcon className="linkedIn" />
+          </a>
         </motion.div>
       </HeroStyles>
     </Layout>
