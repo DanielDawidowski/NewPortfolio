@@ -7,26 +7,37 @@ const transition = { duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const ProjectCard = ({ card, expanded, setExpanded }) => {
   const isOpen = card.id === expanded;
-  const { img, logo, link, techIcons } = card;
+  const { img, smallImg, logo, link, techIcons } = card;
 
   return (
     <ProjectCardStyles
       onClick={() => setExpanded(isOpen ? false : card.id)}
-      animate={isOpen ? { height: "550px" } : { height: "450px" }}
+      // initial={{ scale: 0.7 }}
+      animate={
+        isOpen
+          ? { height: 550, width: 350 }
+          : { height: 450, width: 300, borderRadius: "53px 53px 0 0" }
+      }
+      style={isOpen && { borderRadius: "53px" }}
       transition={{ duration: 0.1 }}
     >
-      <ProgressiveImage src={img} placeholder={img}>
+      <ProgressiveImage
+        src={isOpen ? smallImg : img}
+        placeholder={isOpen ? img : smallImg}
+      >
         {(src) => (
           <motion.img
             src={src}
             alt={img}
             transition={transition}
-            animate={isOpen ? { height: "250px" } : { height: "450px" }}
+            animate={
+              isOpen ? { height: 250, width: 350 } : { height: 450, width: 300 }
+            }
             whileHover={!isOpen ? { scale: 1.1 } : { scale: 1 }}
             style={
               isOpen
-                ? { borderRadius: "27px 27px 0 0" }
-                : { borderRadius: "27px" }
+                ? { borderRadius: "53px 53px 0 0" }
+                : { borderRadius: "53px" }
             }
           />
         )}

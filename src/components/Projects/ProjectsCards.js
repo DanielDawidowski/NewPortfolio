@@ -9,9 +9,12 @@ import { ReactComponent as HTMLLogo } from "../../assets/projects/HTML-logo.svg"
 import { ReactComponent as CSSLogo } from "../../assets/projects/CSS-logo.svg";
 import { ReactComponent as ReactJSLogo } from "../../assets/projects/ReactJS-logo.svg";
 import { ReactComponent as NodeJSLogo } from "../../assets/projects/nodeJS-logo.svg";
-import PhotoImg from "../../assets/projects/kalen-emsley-Bkci_8qcdvQ-unsplash 3.png";
-import AOImg from "../../assets/projects/firecamp.png";
-import RestaurantImg from "../../assets/projects/restaurant.png";
+import SmallPhotoImg from "../../assets/projects/kalen-emsley-Bkci_8qcdvQ-unsplash 3.png";
+import SmallAOImg from "../../assets/projects/firecamp.png";
+import SmallRestaurantImg from "../../assets/projects/restaurant.png";
+import PhotoImg from "../../assets/projects/m.png";
+import AOImg from "../../assets/projects/fire.png";
+import RestaurantImg from "../../assets/projects/r.png";
 
 const cards = [
   {
@@ -19,6 +22,7 @@ const cards = [
     link: "http://photographics.netlify.app",
     logo: <PhotoLogo />,
     img: PhotoImg,
+    smallImg: SmallPhotoImg,
     techIcons: [<JSLogo />, <HTMLLogo />, <CSSLogo />],
   },
   {
@@ -26,6 +30,7 @@ const cards = [
     link: "http://aktywneobozy.herokuapp.com",
     logo: <AOLogo />,
     img: AOImg,
+    smallImg: SmallAOImg,
     techIcons: [<ReactJSLogo />, <NodeJSLogo />],
   },
   {
@@ -33,6 +38,7 @@ const cards = [
     link: "http://restaurantte.netlify.app",
     logo: <RestaurantLogo />,
     img: RestaurantImg,
+    smallImg: SmallRestaurantImg,
     techIcons: [<JSLogo />, <HTMLLogo />, <CSSLogo />],
   },
 ];

@@ -11,8 +11,8 @@ export const ProjectsStyles = styled(motion.div)`
   grid-template-rows: repeat(7, 1fr);
   overflow: hidden;
 
-  @media (min-width: 200px) and (max-width: 800px) {
-    height: 280vh;
+  @media (min-width: 200px) and (max-width: 1000px) {
+    height: 300vh;
     /* overflow: unset; */
   }
 `;
@@ -48,15 +48,14 @@ export const ProjectsCardsStyles = styled(motion.ul)`
 `;
 
 export const ProjectCardStyles = styled(motion.li)`
-  border-radius: 27px 27px 27px 27px;
+  border-radius: 70px;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(8, 1fr);
-
-  width: 350px;
+  width: 340px;
   height: 450px;
   background-color: ${(props) => props.theme.light_black};
-
+  margin: 1rem 0;
   @media (min-width: 801px) and (max-width: 1200px) {
     width: 300px;
     height: 400px;
@@ -72,7 +71,7 @@ export const ProjectCardStyles = styled(motion.li)`
   @media (min-width: 200px) and (max-width: 400px) {
     width: 250px;
     height: 200px;
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
 
   img {

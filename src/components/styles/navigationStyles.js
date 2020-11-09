@@ -70,17 +70,38 @@ export const NavList = styled.div`
     display: flex;
     li {
       list-style: none;
-      font-size: 1.6rem;
       text-transform: uppercase;
       font-weight: 900;
       margin-left: 1rem;
       height: 100px;
       overflow: hidden;
 
-      @media (min-width: 700px) {
+      a {
+        font-size: 1.6rem;
+      }
+
+      @media (max-width: 700px) {
         font-size: 1rem;
-        height: 96px;
-        line-height: 96px;
+        height: 80px;
+        line-height: 20px;
+      }
+      &:last-child {
+        position: relative;
+        height: 200px;
+        @media (max-width: 700px) {
+          width: 200px;
+        }
+        svg {
+          @media (max-width: 700px) {
+            width: 70px;
+          }
+          &:last-child {
+            width: 250px;
+            @media (max-width: 700px) {
+              width: 70px;
+            }
+          }
+        }
       }
     }
   }

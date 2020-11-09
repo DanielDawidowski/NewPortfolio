@@ -28,7 +28,6 @@ const RegisterForm = () => {
   } = data;
 
   const handleChange = (name) => (event) => {
-    //   const value = name === "photo" ? event.target.files[0] : event.target.value;
     const value = event.target.value;
     setData({ ...data, [name]: value });
   };
@@ -71,10 +70,32 @@ const RegisterForm = () => {
 
   return (
     <RegisterFormStyles contact>
-      <motion.div className="left">
-        <Form onSubmit={clickSubmit}>
+      <motion.div
+        // initial={{ opacity: 0, y: -600 }}
+        // animate={{ opacity: 1, y: 0 }}
+        // transition={{
+        //   duration: 1.5,
+        // }}
+        // exit={{ opacity: 0, y: -600 }}
+        className="left"
+      >
+        <Form
+          onSubmit={clickSubmit}
+          initial={{ opacity: 0, y: -200 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1.5,
+          }}
+          exit={{ opacity: 0, y: -200 }}
+        >
           <label>
-            <textarea
+            <motion.textarea
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 2,
+              }}
+              exit={{ opacity: 0, x: -50 }}
               type="text"
               // className="input-error"
               defaultValue={data.message}
@@ -84,7 +105,13 @@ const RegisterForm = () => {
             />
           </label>
           <label>
-            <input
+            <motion.input
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 2,
+              }}
+              exit={{ opacity: 0, x: -50 }}
               type="text"
               // className="input-error"
               defaultValue={data.name}
@@ -93,7 +120,13 @@ const RegisterForm = () => {
             />
           </label>
           <label>
-            <input
+            <motion.input
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 2,
+              }}
+              exit={{ opacity: 0, x: -50 }}
               type="email"
               // className="input-error"
               defaultValue={data.email}
@@ -101,10 +134,27 @@ const RegisterForm = () => {
               onChange={handleChange("email")}
             />
           </label>
-          <button>{buttonText}</button>
+          <motion.button
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 2,
+            }}
+            exit={{ opacity: 0, scale: 0.7 }}
+          >
+            {buttonText}
+          </motion.button>
         </Form>
       </motion.div>
-      <motion.div className="right"></motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 600 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{
+          duration: 1,
+        }}
+        exit={{ opacity: 0, x: 600 }}
+        className="right"
+      ></motion.div>
     </RegisterFormStyles>
   );
 };

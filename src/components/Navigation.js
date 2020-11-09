@@ -30,9 +30,7 @@ const Navigation = ({ toggleMenu, setToggleMenu }) => {
               </Flex>
             </NavHeader>
             <Container>
-              <NavList displayBlock>
-                <Menu onClick={() => setToggleMenu(!toggleMenu)} />
-              </NavList>
+              <Menu onClick={() => setToggleMenu(!toggleMenu)} />
             </Container>
           </Nav>
         )}
