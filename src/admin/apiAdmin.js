@@ -2,7 +2,7 @@ import { API } from "../config";
 
 export const createClientEmail = (data) => {
   // console.log(name, email, password);
-  return fetch(`${API}/contact-client`, {
+  return fetch(`${API}/contact`, {
     method: "POST",
     headers: {
       Accept: "application/json",
